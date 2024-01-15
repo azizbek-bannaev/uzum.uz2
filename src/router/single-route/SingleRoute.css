@@ -1,0 +1,15 @@
+.single__route
+{
+    padding: 50px;
+    display: flex;   
+    justify-content: space-between;
+}
+.single__route button
+{
+    width: 180px;
+    height: 30px;
+    border-radius: 20px;
+    background: var(--bg-py);
+    color: white;
+    border: none;
+}

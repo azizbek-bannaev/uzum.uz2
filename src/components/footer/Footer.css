@@ -1,0 +1,102 @@
+.footer__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.footer__collection {
+    line-height: 1.6;
+}
+
+.footer__collection-item {
+    list-style: none;
+    color: gray;
+
+}
+
+.footer__collection-item:hover {
+    text-decoration: underline;
+    color: dodgerblue;
+    cursor: pointer;
+}
+
+.footer__icon {
+    line-height: 1.6;
+}
+
+.footer__icon-network {
+    display: flex;
+    gap: 20px;
+}
+
+.footer__network-instagram {
+    color: rgb(226, 43, 217);
+    font-size: 33px;
+}
+
+.footer__network-telegram,
+.footer__network-facebook {
+    color: dodgerblue;
+    font-size: 33px;
+}
+
+.footer__network-youtube {
+    color: red;
+    font-size: 33px;
+}
+
+.footer__app-dowloand {
+    line-height: 1.6;
+}
+
+.footer__dowloand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer__googleplay {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+}
+
+.footer__googleplay span {
+    font-size: 25px;
+    color: rgb(130, 130, 31);
+}
+
+.footer__apstore {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.footer__apstore span {
+    font-size: 25px;
+
+}
+
+@media screen and (max-width: 950px) {
+    .footer__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px;
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .footer__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer__wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+    }
+}

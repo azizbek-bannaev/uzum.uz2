@@ -1,0 +1,51 @@
+.login
+{
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    margin:  30px auto 200px;
+    background: var(--bg-sy);
+    line-height: 1.8;
+    text-align: center;
+}
+.login h2
+{
+    color: var(--bg-py);
+    text-decoration: none;
+}
+.login input 
+{
+    width: 90%;
+    height: 35px;
+    margin-top: 12px;
+    padding-left: 12px;
+    border:  none;
+    border-radius: 20px;
+}
+.login input:hover
+{
+    cursor: pointer;
+    box-shadow:  0 0 5px 0 var(--bg-py);
+}
+.login button
+{
+    width: 90%;
+    height: 35px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+}
+.login button:hover
+{
+    cursor: pointer;
+    box-shadow:  0 0 5px 0 var(--bg-py);
+}
+.login a
+{   
+    color: #017DFD;
+}
+.login a:hover
+{
+    text-decoration: underline;
+}
