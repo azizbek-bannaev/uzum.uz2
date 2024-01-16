@@ -85,18 +85,40 @@
     }
 }
 
+@media screen and (max-width: 760px) {
+    .footer
+    {
+        height: 300px;
+    }
+}
+
 @media screen and (max-width: 735px) {
     .footer__wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 40px;
     }
+    .footer
+    {
+        height: 350px;
+    }
 }
+
+@media screen and (max-width: 540px) {
+    .footer
+    {
+        height: 390px;
+    }
+} 
 
 @media screen and (max-width: 500px) {
     .footer__wrapper {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 30px;
+    }
+    .footer
+    {
+        height: 580px;
     }
 }

@@ -1,0 +1,22 @@
+.empty{
+    text-align: center;
+    line-height: 1.8;
+}
+
+.empty img
+{
+ width: 150px;
+
+}
+.empty button
+{
+    width: 130px;
+    height: 38px;
+    padding: 0 2px 0 2px ;
+    background: var(--bg-py);
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+
