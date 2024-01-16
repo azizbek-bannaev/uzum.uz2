@@ -13,7 +13,7 @@ function SingleRoute() {
   return (
     <div className='single__route container'>
         <div>
-        <img src={oneitem?.url[0]} width={400} alt="" />
+        <img src={oneitem?.url[0]}  alt="" />
         </div>
         <div>
         <h2>{oneitem?.title}</h2>

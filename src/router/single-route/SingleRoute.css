@@ -4,6 +4,10 @@
     display: flex;   
     justify-content: space-between;
 }
+.single__route img
+{
+    width: 400px;
+}
 .single__route button
 {
     width: 180px;
@@ -12,4 +16,27 @@
     background: var(--bg-py);
     color: white;
     border: none;
+}
+
+
+@media screen and (max-width: 930px) {
+    .single__route img{
+        width: 350px;
+    }
+}
+@media screen and (max-width: 670px) {
+    .single__route
+    {
+        display: block;
+    }
+}
+@media screen and (max-width: 670px){
+    .single__route img {
+        width: 280px;
+    }
+}
+@media screen and (max-width: 360px){
+    .single__route img{
+        width: 260px    ;
+    }
 }

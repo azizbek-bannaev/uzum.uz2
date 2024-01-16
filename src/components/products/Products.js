@@ -1,13 +1,13 @@
 import React from 'react';
 import "./Products.css";
-import { IoHeartOutline, IoCartOutline } from  "react-icons/io5";
+import { IoHeartOutline, IoHeart, IoCartOutline } from  "react-icons/io5";
 import { Link } from "react-router-dom";
-import { useDispatch } from 'react-redux'; // Fixed typo in 'UseDispatch'
-import { addToWishes } from "../../context/wishesSlice";
+import { useDispatch, useSelector } from 'react-redux'; // Fixed typo in 'UseDispatch'
+import { addToWishes, removeFromWishes } from "../../context/wishesSlice";
 
 function Products({ title, data }) {
     const dispatch = useDispatch(); // Fixed typo in 'dispath'
-    
+    const wishes = useSelector((s) => s.wishes.value);
     return (
         <div className='container'>
             <div className="products">
@@ -26,12 +26,22 @@ function Products({ title, data }) {
                             <br />
                             <del className='product__old-price'>1500 so'm</del>
                             <b className='product__price'>{el.price?.brm()} so'm</b>
-                            <div
+                            {wishes?.some((liked) => liked.id === el.id) ? (
+                                <div
+                                onClick={() => dispatch(removeFromWishes(el))} // Fixed typo in 'dispath'
+                                className="product__heart liked"
+                            >
+                                <IoHeart />
+                            </div> 
+                            ) : (
+                                <div
                                 onClick={() => dispatch(addToWishes(el))} // Fixed typo in 'dispath'
                                 className="product__heart"
                             >
                                 <IoHeartOutline />
-                            </div>
+                            </div> 
+                            ) }
+                           
                             <div className="product__cart">
                                 <IoCartOutline />
                             </div>
