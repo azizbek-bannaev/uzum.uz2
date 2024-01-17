@@ -89,6 +89,16 @@
 .navbar__item:first-child {
     display: none;
 }
+.navbar__item sup{
+    background: var(--bg-py);
+    color: #fff;
+    padding: 1px 3px;
+    min-width: 16px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 20px;
+    font-size: 11px;
+}
 
 /* Navbar Bottom Styles */
 /* NAVBAR-BOTTOM - start */

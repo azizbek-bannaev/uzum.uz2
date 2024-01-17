@@ -2,8 +2,11 @@ import React from 'react'
 import "./NavbarContainer.css"
 import { FaRegUser, FaRegHeart } from "react-icons/fa";
 import { IoCartOutline, IoMenu, IoSearch, IoHomeOutline } from "react-icons/io5";
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation  } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 function Navbar() {
+    const wishes = useSelector(s=> s.wishes.value)
     const { pathname } = useLocation()
     if(pathname.includes("login")){
         return<></>
@@ -41,7 +44,9 @@ function Navbar() {
                 <li className='navbar__item'>
                     <NavLink to={"/wishis"} className="navbar__link">
                         <FaRegHeart/>
-                        <span>Sevimlilar</span>
+                        <span>Sevimlilar <sup>{wishes.length}</sup></span>
+                        
+                        
                     </NavLink>
                 </li>
                 <li className='navbar__item'>

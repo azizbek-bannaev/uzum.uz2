@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import Products from '../../components/products/Products';
-import Empty from '../../components/wishesempty/Empty';
+import WishesEmpty from '../../components/wishesempty/WishesEmpty';
 
 
 
@@ -12,9 +12,9 @@ function Wishis() {
   return (
     <div>
       {
-        wishes.length ? <Products title="Sevimlilar"/> : <Empty/>
+        wishes.length ? <Products data={wishes} title="Sevimlilar"/> : <WishesEmpty/>
       }
-      <Products data={wishes}   />
+      
     </div>
   )
 }
