@@ -1,8 +1,13 @@
 import React from 'react'
 import "./Footer.css"
 import { FaApple, FaFacebook, FaGooglePlay, FaInstagram, FaTelegram, FaYoutube } from "react-icons/fa";
+import { useLocation } from 'react-router-dom';
 
 function Footer() {
+    const { pathname } = useLocation()
+    if(pathname.includes("login")){
+        return<></>
+    }
     return (
         <div className='footer container'>
             <div className="footer__wrapper ">

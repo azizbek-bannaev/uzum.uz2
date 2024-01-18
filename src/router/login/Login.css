@@ -4,7 +4,8 @@
     height: 280px;
     background: var(--bg-sy);
     text-align: center;
-    margin: 30px auto;
+    margin: auto;
+    margin-top: 200px;
     border-radius: 20px;
     line-height: 2;
 
