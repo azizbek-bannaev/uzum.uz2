@@ -1,17 +1,17 @@
 .login
 {
-    width: 340px;
-    height: 380px;
-    border-radius: 20px;
-    margin:  30px auto 200px;
-    background: var(--bg-sy);
-    line-height: 2;
+    width: 300px;
+    height: 280px;
+    background: var(--bg-py);
     text-align: center;
-    box-shadow: 0px 5px 30px 0px  var(--bg-py);
+    margin: 30px auto;
+    border-radius: 20px;
+    line-height: 2;
+
 }
 .login h2
 {
-    color: var(--bg-py);
+    color: var(--bg-sy);
     text-decoration: none;
 }
 .login input 
