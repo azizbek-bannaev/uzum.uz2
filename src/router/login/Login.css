@@ -2,7 +2,7 @@
 {
     width: 300px;
     height: 280px;
-    background: var(--bg-py);
+    background: var(--bg-sy);
     text-align: center;
     margin: 30px auto;
     border-radius: 20px;
@@ -11,7 +11,7 @@
 }
 .login h2
 {
-    color: var(--bg-sy);
+    color: var(--bg-py);
     text-decoration: none;
 }
 .login input 
@@ -20,7 +20,7 @@
     height: 35px;
     margin-top: 12px;
     padding-left: 12px;
-    border:  1px solid var(--bg-py);
+    border:  none;
     border-radius: 20px;
 }
 .login input:hover
@@ -31,7 +31,9 @@
 {
     width: 90%;
     height: 35px;
-    border: 1px solid var(--bg-py);
+    border: none;
+    background: #7000ff;
+    color: white;
     margin-top: 12px;
     border-radius: 20px;
     font-size: 18px;

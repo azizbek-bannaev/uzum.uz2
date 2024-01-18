@@ -6,7 +6,7 @@ function Login() {
   return (
     <div className='login'>
       <NavLink to={"/"}>
-      <h2>uzum markek</h2>
+      <h2>uzum market</h2>
       </NavLink>
       <input type="email" placeholder='email...' />
       <input type="password" placeholder='password' />
