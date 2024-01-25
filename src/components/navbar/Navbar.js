@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 
 function Navbar() {
     const wishes = useSelector(s=> s.wishes.value)
+    const cart = useSelector(s=> s.cart.value)
     const { pathname } = useLocation()
     if(pathname.includes("login")){
         return<></>
@@ -17,7 +18,7 @@ function Navbar() {
             
             <NavLink to={"/"} className="navbar__logo">
                 {/* <img src="" alt="" /> */}
-                <h2>banan market</h2>
+                <h2>uzum market</h2>
             </NavLink>
             <button className='navbar__btn-category'>
                 <IoMenu/>
@@ -52,7 +53,7 @@ function Navbar() {
                 <li className='navbar__item'>
                     <NavLink to={"/cart"} className="navbar__link">
                         <IoCartOutline/>
-                        <span>Savatcha</span>
+                        <span>Savatcha <sup>{cart.length}</sup> </span>
                     </NavLink>
                 </li>
                 </ul>

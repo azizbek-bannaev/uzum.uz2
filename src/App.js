@@ -10,6 +10,10 @@ import Footer from './components/footer/Footer';
 import Nodfaund from './router/nodfaund/Nodfaund';
 import { PRODUCTS } from "./static/index"
 import SingleRoute from './router/single-route/SingleRoute';
+import Auth from './router/auth/Auth';
+import Admin from './router/admin/Admin';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -20,6 +24,9 @@ function App() {
         <Route path='login' element={<Login/>} />
         <Route path='cart' element={<Cart/>} />
         <Route path='wishis' element={<Wishis/>} />
+        <Route path='/' element={<Auth/>}>
+        <Route path='admin' element={<Admin/>} />
+        </Route>
         <Route path='product/:id' element={<SingleRoute/>} />
         <Route path='*' element={<Nodfaund/>} />
       </Routes>
@@ -27,6 +34,7 @@ function App() {
       <br />
       <br />
       <Footer/>
+      <ToastContainer/>
     </div>
   );
 }

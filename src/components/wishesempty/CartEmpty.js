@@ -1,7 +1,9 @@
 import React from 'react'
 import cartemptyimg from "../../assets/shopocat.490a4a1.png"
 import { NavLink } from 'react-router-dom' 
+
 import "./Empty.css"
+
 
 function CartEmpty() {
   return (

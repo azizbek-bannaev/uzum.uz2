@@ -4,10 +4,16 @@ import { IoHeartOutline, IoHeart, IoCartOutline } from  "react-icons/io5";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'; // Fixed typo in 'UseDispatch'
 import { addToWishes, removeFromWishes } from "../../context/wishesSlice";
+import { inCart } from '../../context/cartSlice';
+import { toast } from 'react-toastify' 
 
 function Products({ title, data }) {
     const dispatch = useDispatch(); // Fixed typo in 'dispath'
     const wishes = useSelector((s) => s.wishes.value);
+    const handleAddCart = (el)=>{
+        dispatch(inCart(el))
+        toast.success("Savatga qo'shildi", {position: "top-center"})
+    }
     return (
         <div className='container'>
             <div className="products">
@@ -21,10 +27,10 @@ function Products({ title, data }) {
                                 </Link>
                             </div>
                             <p className='product__title'>{el.title}</p>
-                            <mark className='product__monthly'>1500 so'm/oyiga</mark>
+                            <mark className='product__monthly'>{(el.price * 1.5 / 12)?.brm() } so'm/oyiga</mark>
                             <br />
                             <br />
-                            <del className='product__old-price'>1500 so'm</del>
+                            <del className='product__old-price'>{(el.price * 1.3)?.brm()} so'm</del>
                             <b className='product__price'>{el.price?.brm()} so'm</b>
                             {wishes?.some((liked) => liked.id === el.id) ? (
                                 <div
@@ -42,7 +48,7 @@ function Products({ title, data }) {
                             </div> 
                             ) }
                            
-                            <div className="product__cart">
+                            <div onClick={()=> handleAddCart(el)} className="product__cart">
                                 <IoCartOutline />
                             </div>
                         </div>
